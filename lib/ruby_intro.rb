@@ -2,15 +2,24 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  arr.sum
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  arr.sort!
+  arr.reverse!
+  if arr.length < 1 then 0 
+    elsif  arr.length < 2 then (arr[0]) 
+    else arr[0] + arr[1] 
+  end
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  if arr.length < 1 then false 
+    elsif  arr.length < 2 then false
+    else
+      arr.each {|x, y| }
+  end
 end
 
 # Part 2
