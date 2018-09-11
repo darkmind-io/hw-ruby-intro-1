@@ -15,10 +15,20 @@ def max_2_sum arr
 end
 
 def sum_to_n? arr, n
-  if arr.length < 1 then false 
-    elsif  arr.length < 2 then false
-    else
-      arr.each {|x, y| }
+  if arr.length < 2 then false 
+  else
+    curr_Iter = 0 
+    bool_test = false
+    arr.each { |x|
+      inner_Iter = curr_Iter + 1
+      while inner_Iter < arr.length
+        bool_test = x + arr[inner_Iter] == n
+        if bool_test then return bool_test end
+        inner_Iter += 1
+      end
+      curr_Iter += 1
+    }
+    return bool_test
   end
 end
 
