@@ -35,11 +35,16 @@ end
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  puts "Hello, #{name}"
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  return false if s.empty?
+  return false if /^[a-zA-Z]/ !~ s ? true : false
+  string_Arr = s.split("")
+  vowelArr = ['A', 'E', 'I', 'O', 'U']
+  return false if vowelArr.include?(string_Arr[0].upcase)
+  return true
 end
 
 def binary_multiple_of_4? s
