@@ -35,7 +35,7 @@ end
 # Part 2
 
 def hello(name)
-  puts "Hello, #{name}"
+  return "Hello, #{name}"
 end
 
 def starts_with_consonant? s
@@ -57,5 +57,21 @@ end
 # Part 3
 
 class BookInStock
-# YOUR CODE HERE
+  attr_accessor :isbn, :price
+  
+  def initialize(isbn, price)
+    @isbn = isbn
+    @price = price
+    if @isbn.empty? then
+      raise ArgumentError.new("ISBN is Empty")
+    end
+    if @price <= 0 then
+      raise ArgumentError.new("Price should be greater than $0.00")
+    end
+  end
+  
+  def price_as_string
+    sprintf "$%.2f", @price
+  end
+  
 end
