@@ -48,7 +48,10 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  return false if s.empty?
+  return false if /^[0-1]+$/ !~ s ? true : false
+  return true if s.to_i(2) % 4 == 0 
+  return false
 end
 
 # Part 3
